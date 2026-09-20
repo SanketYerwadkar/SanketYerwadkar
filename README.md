@@ -23,43 +23,42 @@
 
 <img src="assets/divider.svg" width="100%" alt="">
 
-<div align="center">
+## Tech Stack
 
-<img src="assets/stack-title.svg" alt="Tech Stack" width="100%"/>
-
-<br/>
-
-<img src="assets/label-frontend.svg" alt="Frontend" height="40"/>
-<br/><br/>
-<img src="https://skillicons.dev/icons?i=angular,ts,js,react,html,css,bootstrap&theme=dark&perline=7" alt="Frontend stack"/>
-
-<br/><br/>
-
-<img src="assets/label-backend.svg" alt="Backend" height="40"/>
-<br/><br/>
-<img src="https://skillicons.dev/icons?i=cs,dotnet,nodejs,express&theme=dark&perline=4" alt="Backend stack"/>
-
-<br/><br/>
-
-<img src="assets/label-mobile.svg" alt="Mobile" height="40"/>
-<br/><br/>
-<img src="https://skillicons.dev/icons?i=kotlin&theme=dark" alt="Mobile stack"/>
-
-<br/><br/>
-
-<img src="assets/label-database.svg" alt="Database" height="40"/>
-<br/><br/>
-<img src="https://skillicons.dev/icons?i=postgres,mongodb&theme=dark&perline=2" alt="Database stack"/>
-
-<br/><br/>
-
-<img src="assets/label-tools.svg" alt="Tools and DevOps" height="40"/>
-<br/><br/>
-<img src="https://skillicons.dev/icons?i=git,github,docker,postman,azure&theme=dark&perline=5" alt="Tools and DevOps stack"/>
-
-</div>
-
-<br/>
+<table>
+  <tr>
+    <td width="110"><b>Frontend</b></td>
+    <td><img src="https://skillicons.dev/icons?i=angular,ts,js,react,html,css,bootstrap&theme=dark" alt="Angular, TypeScript, JavaScript, React, HTML, CSS, Bootstrap"></td>
+  </tr>
+  <tr>
+    <td><b>Backend</b></td>
+    <td>
+      <img src="https://skillicons.dev/icons?i=cs,dotnet,nodejs,express&theme=dark" alt="C#, .NET, Node.js, Express"><br>
+      <sub>C# · .NET · ASP.NET Core · Node.js · Express · REST APIs</sub>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Database</b></td>
+    <td>
+      <img src="https://skillicons.dev/icons?i=postgres,mongodb&theme=dark" alt="PostgreSQL, MongoDB"><br>
+      <sub>SQL · PostgreSQL · MongoDB</sub>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Mobile</b></td>
+    <td>
+      <img src="https://skillicons.dev/icons?i=kotlin&theme=dark" alt="Kotlin"><br>
+      <sub>Kotlin · Android</sub>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Tools</b></td>
+    <td>
+      <img src="https://skillicons.dev/icons?i=git,github,docker,postman,azure&theme=dark" alt="Git, GitHub, Docker, Postman, Azure"><br>
+      <sub>Git · GitHub · Docker · Postman · Azure DevOps</sub>
+    </td>
+  </tr>
+</table>
 
 <img src="assets/divider.svg" width="100%" alt="">
 
