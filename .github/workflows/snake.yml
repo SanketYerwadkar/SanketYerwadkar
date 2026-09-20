@@ -15,14 +15,27 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: Platane/snk/svg-only@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate Snake SVG
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=22D3EE
+            dist/github-snake.svg?color_snake=%2322d3ee&color_dots=%23ebedf0,%239be9a8,%2340c463,%2330a14e,%23216e39
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=%2322d3ee&color_dots=%23161b22,%230c4a6e,%230284c7,%2338bdf8,%2322d3ee
 
-      - uses: crazy-max/ghaction-github-pages@v3.1.0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Enhance Snake Aesthetics
+        run: python tools/enhance_snake.py dist
+
+      - name: Deploy to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist

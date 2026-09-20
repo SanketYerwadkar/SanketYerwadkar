@@ -4,17 +4,48 @@
 <linearGradient id="wv" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#22D3EE" stop-opacity="0.30"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0.30"/></linearGradient>
 <radialGradient id="o1"><stop offset="0" stop-color="#22D3EE" stop-opacity="0.28"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
 <radialGradient id="o2"><stop offset="0" stop-color="#8B5CF6" stop-opacity="0.26"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
-<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.035"/></pattern><radialGradient id="ac"><stop offset="0" stop-color="#8B5CF6" stop-opacity="0.35"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient></defs>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.035"/></pattern>
+<radialGradient id="ac"><stop offset="0" stop-color="#8B5CF6" stop-opacity="0.40"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
+</defs>
 <rect width="640" height="250" rx="16" fill="url(#bg)"/>
 <rect width="640" height="250" rx="16" fill="url(#grid)"/>
-<circle cx="600" cy="20" r="170" fill="url(#ac)"/>
+
+<!-- Breathing ambient corner glow -->
+<circle cx="605" cy="25" r="160" fill="url(#ac)">
+  <animate attributeName="r" values="130;175;130" dur="5s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.4;0.85;0.4" dur="5s" repeatCount="indefinite"/>
+</circle>
+
 <rect x="0.5" y="0.5" width="639" height="249" rx="16" fill="none" stroke="#FFFFFF" stroke-opacity="0.11"/>
-<rect x="32" y="0" width="56" height="3" rx="1.5" fill="#8B5CF6"/>
+
+<!-- Animated top accent beam -->
+<rect x="32" y="0" width="56" height="3" rx="1.5" fill="#8B5CF6">
+  <animate attributeName="width" values="48;84;48" dur="4s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite"/>
+</rect>
+
+<!-- Card number -->
 <text x="32" y="42" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="3" fill="#8B5CF6">03</text>
-<rect x="500" y="24" width="108" height="26" rx="13" fill="#8B5CF6" fill-opacity="0.12" stroke="#8B5CF6" stroke-opacity="0.45"/><circle cx="515" cy="37" r="3" fill="#8B5CF6"><animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/></circle><text x="527" y="41.5" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" letter-spacing="1.2" fill="#8B5CF6">COMPLETED</text>
+<rect x="500" y="24" width="108" height="26" rx="13" fill="#8B5CF6" fill-opacity="0.12" stroke="#8B5CF6" stroke-opacity="0.45"/><circle cx="515" cy="37" r="3.5" fill="#8B5CF6"/><circle cx="515" cy="37" r="3.5" fill="none" stroke="#8B5CF6" stroke-width="1.5"><animate attributeName="r" values="3.5;10" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.85;0" dur="2s" repeatCount="indefinite"/></circle><text x="527" y="41.5" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" letter-spacing="1.2" fill="#8B5CF6">COMPLETED</text>
+
+<!-- Project Title -->
 <text x="31" y="92" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="-0.4" fill="#F8FAFC">Rewindr</text>
-<rect x="32" y="108" width="40" height="2.5" rx="1.25" fill="url(#ln)"/>
+
+<!-- Animated title underline bar -->
+<rect x="32" y="108" width="40" height="2.5" rx="1.25" fill="url(#ln)">
+  <animate attributeName="width" values="36;68;36" dur="3.5s" repeatCount="indefinite"/>
+</rect>
+
 <text x="32" y="140" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#94A3B8">A modern video player with timestamp markers, quick navigation and</text><text x="32" y="162" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#94A3B8">a clean viewing experience.</text>
 <rect x="32" y="190" width="53" height="28" rx="14" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.14"/><text x="59" y="208" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#CBD5E1" text-anchor="middle">HTML</text><rect x="93.2" y="190" width="46" height="28" rx="14" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.14"/><text x="116" y="208" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#CBD5E1" text-anchor="middle">CSS</text><rect x="147.1" y="190" width="97" height="28" rx="14" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.14"/><text x="196" y="208" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#CBD5E1" text-anchor="middle">JavaScript</text>
-<text x="608" y="209" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#8B5CF6" text-anchor="end">GitHub  →</text>
+
+<!-- Interactive animated GitHub button -->
+<g>
+  <rect x="530" y="197" width="78" height="26" rx="13" fill="#8B5CF6" fill-opacity="0.08" stroke="#8B5CF6" stroke-opacity="0.35"/>
+  <text x="562" y="214" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" letter-spacing="0.5" fill="#8B5CF6" text-anchor="middle">GitHub</text>
+  <g>
+    <text x="593" y="214" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#8B5CF6">→</text>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 4 0; 0 0" dur="1.5s" repeatCount="indefinite"/>
+  </g>
+</g>
 </svg>

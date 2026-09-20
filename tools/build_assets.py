@@ -138,8 +138,10 @@ def cards():
             pw = len(s) * 8 + 36
             px = W - 32 - pw
             pill = (f'<rect x="{px:.0f}" y="24" width="{pw:.0f}" height="26" rx="13" fill="{a}" fill-opacity="0.12" stroke="{a}" stroke-opacity="0.45"/>'
-                    f'<circle cx="{px + 15:.0f}" cy="37" r="3" fill="{a}"><animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/>'
-                    f'<animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/></circle>'
+                    f'<circle cx="{px + 15:.0f}" cy="37" r="3.5" fill="{a}"/>'
+                    f'<circle cx="{px + 15:.0f}" cy="37" r="3.5" fill="none" stroke="{a}" stroke-width="1.5">'
+                    f'<animate attributeName="r" values="3.5;10" dur="2s" repeatCount="indefinite"/>'
+                    f'<animate attributeName="opacity" values="0.85;0" dur="2s" repeatCount="indefinite"/></circle>'
                     f'<text x="{px + 27:.0f}" y="41.5" font-family="{MONO}" font-size="11" letter-spacing="1.2" fill="{a}">{escape(s)}</text>')
         chips, x = "", 32
         for t in p.get("stack", []):
@@ -147,19 +149,50 @@ def cards():
             chips += c
             x += w + 8
         svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{escape(p['name'])} project card">
-<defs>{defs()}<radialGradient id="ac"><stop offset="0" stop-color="{a}" stop-opacity="0.35"/><stop offset="1" stop-color="{a}" stop-opacity="0"/></radialGradient></defs>
+<defs>{defs()}
+<radialGradient id="ac"><stop offset="0" stop-color="{a}" stop-opacity="0.40"/><stop offset="1" stop-color="{a}" stop-opacity="0"/></radialGradient>
+</defs>
 <rect width="{W}" height="{H}" rx="16" fill="url(#bg)"/>
 <rect width="{W}" height="{H}" rx="16" fill="url(#grid)"/>
-<circle cx="{W - 40}" cy="20" r="170" fill="url(#ac)"/>
+
+<!-- Breathing ambient corner glow -->
+<circle cx="{W - 35}" cy="25" r="160" fill="url(#ac)">
+  <animate attributeName="r" values="130;175;130" dur="5s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.4;0.85;0.4" dur="5s" repeatCount="indefinite"/>
+</circle>
+
 <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="16" fill="none" stroke="#FFFFFF" stroke-opacity="0.11"/>
-<rect x="32" y="0" width="56" height="3" rx="1.5" fill="{a}"/>
+
+<!-- Animated top accent beam -->
+<rect x="32" y="0" width="56" height="3" rx="1.5" fill="{a}">
+  <animate attributeName="width" values="48;84;48" dur="4s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite"/>
+</rect>
+
+<!-- Card number -->
 <text x="32" y="42" font-family="{MONO}" font-size="12" letter-spacing="3" fill="{a}">{i:02d}</text>
 {pill}
+
+<!-- Project Title -->
 <text x="31" y="92" font-family="{SANS}" font-size="{size}" font-weight="700" letter-spacing="-0.4" fill="{TEXT}">{escape(p['name'])}</text>
-<rect x="32" y="108" width="40" height="2.5" rx="1.25" fill="url(#ln)"/>
+
+<!-- Animated title underline bar -->
+<rect x="32" y="108" width="40" height="2.5" rx="1.25" fill="url(#ln)">
+  <animate attributeName="width" values="36;68;36" dur="3.5s" repeatCount="indefinite"/>
+</rect>
+
 {dl}
 {chips}
-<text x="{W - 32}" y="{H - 41}" font-family="{MONO}" font-size="12" fill="{a}" text-anchor="end">GitHub  →</text>
+
+<!-- Interactive animated GitHub button -->
+<g>
+  <rect x="{W - 110}" y="{H - 53}" width="78" height="26" rx="13" fill="{a}" fill-opacity="0.08" stroke="{a}" stroke-opacity="0.35"/>
+  <text x="{W - 78}" y="{H - 36}" font-family="{MONO}" font-size="11.5" letter-spacing="0.5" fill="{a}" text-anchor="middle">GitHub</text>
+  <g>
+    <text x="{W - 47}" y="{H - 36}" font-family="{MONO}" font-size="13" fill="{a}">→</text>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 4 0; 0 0" dur="1.5s" repeatCount="indefinite"/>
+  </g>
+</g>
 </svg>'''
         write(f"card-{p['slug']}.svg", svg)
 
