@@ -23,36 +23,43 @@
 
 <img src="assets/divider.svg" width="100%" alt="">
 
-## Tech Stack
+<div align="center">
 
-<table width="100%">
-  <tr>
-    <td width="50%" align="center" valign="middle">
-      <b>Frontend</b><br><br>
-      <img src="https://skillicons.dev/icons?i=angular,ts,js,react,html,css,bootstrap&theme=dark" alt="Frontend">
-    </td>
-    <td width="50%" align="center" valign="middle">
-      <b>Backend</b><br><br>
-      <img src="https://skillicons.dev/icons?i=cs,dotnet,nodejs,express&theme=dark" alt="Backend">
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center" valign="middle">
-      <b>Mobile Development</b><br><br>
-      <img src="https://skillicons.dev/icons?i=kotlin,android&theme=dark" alt="Mobile Development">
-    </td>
-    <td width="50%" align="center" valign="middle">
-      <b>Database</b><br><br>
-      <img src="https://skillicons.dev/icons?i=postgres,mongodb&theme=dark" alt="Database">
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" width="100%" align="center" valign="middle">
-      <b>Tools & DevOps</b><br><br>
-      <img src="https://skillicons.dev/icons?i=git,github,docker,postman,azure&theme=dark" alt="Tools & DevOps">
-    </td>
-  </tr>
-</table>
+<img src="assets/stack-title.svg" alt="Tech Stack" width="100%"/>
+
+<br/>
+
+<img src="assets/label-frontend.svg" alt="Frontend" height="40"/>
+<br/><br/>
+<img src="https://skillicons.dev/icons?i=angular,ts,js,react,html,css,bootstrap&theme=dark&perline=7" alt="Frontend stack"/>
+
+<br/><br/>
+
+<img src="assets/label-backend.svg" alt="Backend" height="40"/>
+<br/><br/>
+<img src="https://skillicons.dev/icons?i=cs,dotnet,nodejs,express&theme=dark&perline=4" alt="Backend stack"/>
+
+<br/><br/>
+
+<img src="assets/label-mobile.svg" alt="Mobile" height="40"/>
+<br/><br/>
+<img src="https://skillicons.dev/icons?i=kotlin&theme=dark" alt="Mobile stack"/>
+
+<br/><br/>
+
+<img src="assets/label-database.svg" alt="Database" height="40"/>
+<br/><br/>
+<img src="https://skillicons.dev/icons?i=postgres,mongodb&theme=dark&perline=2" alt="Database stack"/>
+
+<br/><br/>
+
+<img src="assets/label-tools.svg" alt="Tools and DevOps" height="40"/>
+<br/><br/>
+<img src="https://skillicons.dev/icons?i=git,github,docker,postman,azure&theme=dark&perline=5" alt="Tools and DevOps stack"/>
+
+</div>
+
+<br/>
 
 <img src="assets/divider.svg" width="100%" alt="">
 
