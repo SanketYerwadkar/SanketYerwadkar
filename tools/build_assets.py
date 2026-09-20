@@ -138,8 +138,13 @@ def cards():
             pw = len(s) * 8 + 36
             px = W - 32 - pw
             pill = (f'<rect x="{px:.0f}" y="24" width="{pw:.0f}" height="26" rx="13" fill="{a}" fill-opacity="0.12" stroke="{a}" stroke-opacity="0.45"/>'
-                    f'<circle cx="{px + 15:.0f}" cy="37" r="3" fill="{a}"><animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/>'
-                    f'<animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/></circle>'
+                    f'<circle cx="{px + 15:.0f}" cy="37" r="3.5" fill="{a}"/>'
+                    f'<circle cx="{px + 15:.0f}" cy="37" r="3.5" fill="none" stroke="{a}" stroke-width="1.5">'
+                    f'<animate attributeName="r" values="3.5;11" dur="2s" repeatCount="indefinite"/>'
+                    f'<animate attributeName="opacity" values="0.9;0" dur="2s" repeatCount="indefinite"/></circle>'
+                    f'<circle cx="{px + 15:.0f}" cy="37" r="3.5" fill="none" stroke="{a}" stroke-width="1">'
+                    f'<animate attributeName="r" values="3.5;11" begin="1s" dur="2s" repeatCount="indefinite"/>'
+                    f'<animate attributeName="opacity" values="0.7;0" begin="1s" dur="2s" repeatCount="indefinite"/></circle>'
                     f'<text x="{px + 27:.0f}" y="41.5" font-family="{MONO}" font-size="11" letter-spacing="1.2" fill="{a}">{escape(s)}</text>')
         chips, x = "", 32
         for t in p.get("stack", []):
@@ -147,19 +152,84 @@ def cards():
             chips += c
             x += w + 8
         svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{escape(p['name'])} project card">
-<defs>{defs()}<radialGradient id="ac"><stop offset="0" stop-color="{a}" stop-opacity="0.35"/><stop offset="1" stop-color="{a}" stop-opacity="0"/></radialGradient></defs>
+<defs>{defs()}
+<radialGradient id="ac"><stop offset="0" stop-color="{a}" stop-opacity="0.45"/><stop offset="1" stop-color="{a}" stop-opacity="0"/></radialGradient>
+<radialGradient id="ac2"><stop offset="0" stop-color="{CYAN}" stop-opacity="0.25"/><stop offset="1" stop-color="{CYAN}" stop-opacity="0"/></radialGradient>
+<clipPath id="card-rc"><rect width="{W}" height="{H}" rx="16"/></clipPath>
+</defs>
 <rect width="{W}" height="{H}" rx="16" fill="url(#bg)"/>
 <rect width="{W}" height="{H}" rx="16" fill="url(#grid)"/>
-<circle cx="{W - 40}" cy="20" r="170" fill="url(#ac)"/>
+
+<!-- Breathing ambient glows -->
+<circle cx="{W - 30}" cy="25" r="160" fill="url(#ac)">
+  <animate attributeName="r" values="130;185;130" dur="6s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.4;0.8;0.4" dur="6s" repeatCount="indefinite"/>
+</circle>
+<circle cx="30" cy="{H - 20}" r="110" fill="url(#ac2)">
+  <animate attributeName="r" values="90;130;90" dur="8s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.15;0.45;0.15" dur="8s" repeatCount="indefinite"/>
+</circle>
+
+<!-- Rotating cyber tech rings in corner -->
+<g fill="none" stroke="{a}" stroke-opacity="0.28">
+  <circle cx="{W - 85}" cy="68" r="44" stroke-dasharray="3 7"/>
+  <circle cx="{W - 85}" cy="24" r="3.5" fill="{a}" stroke="none"/>
+  <animateTransform attributeName="transform" type="rotate" from="0 {W - 85} 68" to="360 {W - 85} 68" dur="24s" repeatCount="indefinite"/>
+</g>
+<g fill="none" stroke="#FFFFFF" stroke-opacity="0.16">
+  <circle cx="{W - 85}" cy="68" r="26" stroke-dasharray="2 5"/>
+  <circle cx="{W - 85}" cy="94" r="2.5" fill="{CYAN}" stroke="none"/>
+  <animateTransform attributeName="transform" type="rotate" from="360 {W - 85} 68" to="0 {W - 85} 68" dur="16s" repeatCount="indefinite"/>
+</g>
+<path d="M{W - 90} 68 H{W - 80} M{W - 85} 63 V{W - 85} 73" stroke="{a}" stroke-opacity="0.35" stroke-width="1"/>
+
+<!-- Fluid wave at card bottom -->
+<g clip-path="url(#card-rc)">
+  <path d="M0,{H - 10} Q80,{H - 18} 160,{H - 10} T320,{H - 10} T480,{H - 10} T640,{H - 10} T800,{H - 10} T960,{H - 10} L960,{H} L0,{H} Z" fill="url(#wv)" opacity="0.45">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="-320 0" dur="8s" repeatCount="indefinite"/>
+  </path>
+</g>
+
+<!-- Outer card border -->
 <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="16" fill="none" stroke="#FFFFFF" stroke-opacity="0.11"/>
-<rect x="32" y="0" width="56" height="3" rx="1.5" fill="{a}"/>
+
+<!-- Animated top accent energy beam -->
+<rect x="32" y="0" width="60" height="3" rx="1.5" fill="{a}">
+  <animate attributeName="width" values="50;95;50" dur="4s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="4s" repeatCount="indefinite"/>
+</rect>
+
+<!-- Corner twinkle sparkle -->
+<circle cx="32" cy="24" r="2" fill="{a}">
+  <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/>
+  <animate attributeName="r" values="1.5;3;1.5" dur="3s" repeatCount="indefinite"/>
+</circle>
+
+<!-- Card number -->
 <text x="32" y="42" font-family="{MONO}" font-size="12" letter-spacing="3" fill="{a}">{i:02d}</text>
+
 {pill}
+
+<!-- Project Title -->
 <text x="31" y="92" font-family="{SANS}" font-size="{size}" font-weight="700" letter-spacing="-0.4" fill="{TEXT}">{escape(p['name'])}</text>
-<rect x="32" y="108" width="40" height="2.5" rx="1.25" fill="url(#ln)"/>
+
+<!-- Animated title underline bar -->
+<rect x="32" y="108" width="44" height="2.5" rx="1.25" fill="url(#ln)">
+  <animate attributeName="width" values="40;80;40" dur="4.5s" repeatCount="indefinite"/>
+</rect>
+
 {dl}
 {chips}
-<text x="{W - 32}" y="{H - 41}" font-family="{MONO}" font-size="12" fill="{a}" text-anchor="end">GitHub  →</text>
+
+<!-- Interactive animated GitHub button -->
+<g>
+  <rect x="{W - 108}" y="{H - 53}" width="76" height="26" rx="13" fill="{a}" fill-opacity="0.09" stroke="{a}" stroke-opacity="0.35"/>
+  <text x="{W - 77}" y="{H - 36}" font-family="{MONO}" font-size="11.5" letter-spacing="0.5" fill="{a}" text-anchor="middle">GitHub</text>
+  <g>
+    <text x="{W - 46}" y="{H - 36}" font-family="{MONO}" font-size="13" fill="{a}">→</text>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 3 0; 0 0" dur="1.6s" repeatCount="indefinite"/>
+  </g>
+</g>
 </svg>'''
         write(f"card-{p['slug']}.svg", svg)
 
