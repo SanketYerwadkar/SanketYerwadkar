@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="240" viewBox="0 0 1280 240" role="img" aria-label="Let&#x27;s build something useful.">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B0F19"/><stop offset="1" stop-color="#0F1730"/></linearGradient>
+<linearGradient id="ln" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+<linearGradient id="wv" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#22D3EE" stop-opacity="0.30"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0.30"/></linearGradient>
+<radialGradient id="o1"><stop offset="0" stop-color="#22D3EE" stop-opacity="0.28"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
+<radialGradient id="o2"><stop offset="0" stop-color="#8B5CF6" stop-opacity="0.26"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.035"/></pattern><clipPath id="rc"><rect width="1280" height="240" rx="18"/></clipPath></defs>
+<rect width="1280" height="240" rx="18" fill="url(#bg)"/>
+<rect width="1280" height="240" rx="18" fill="url(#grid)"/>
+<circle cx="640" cy="40" r="300" fill="url(#o1)"><animateTransform attributeName="transform" type="translate" values="-80 0;80 20;-80 0" dur="18s" repeatCount="indefinite"/></circle>
+<text x="640" y="92" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" letter-spacing="4" fill="#22D3EE" text-anchor="middle">CONTACT</text>
+<text x="640" y="148" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="46" font-weight="800" letter-spacing="-1" fill="#F8FAFC" text-anchor="middle">Let&#x27;s build something useful.</text>
+<g clip-path="url(#rc)"><path d="M0,206 Q80,192 160,206 T320,206 Q400,192 480,206 T640,206 Q720,192 800,206 T960,206 Q1040,192 1120,206 T1280,206 Q1360,192 1440,206 T1600,206 Q1680,192 1760,206 T1920,206 Q2000,192 2080,206 T2240,206 Q2320,192 2400,206 T2560,206 L2560,240 L0,240 Z" fill="url(#wv)" opacity="0.9" transform="translate(0,0)"><animateTransform attributeName="transform" type="translate" from="0 0" to="-640 0" dur="16s" repeatCount="indefinite"/></path>
+<path d="M0,220 Q80,210 160,220 T320,220 Q400,210 480,220 T640,220 Q720,210 800,220 T960,220 Q1040,210 1120,220 T1280,220 Q1360,210 1440,220 T1600,220 Q1680,210 1760,220 T1920,220 Q2000,210 2080,220 T2240,220 Q2320,210 2400,220 T2560,220 L2560,240 L0,240 Z" fill="url(#wv)" opacity="0.7" transform="translate(-160,0)"><animateTransform attributeName="transform" type="translate" from="-160 0" to="-800 0" dur="24s" repeatCount="indefinite"/></path></g>
+<rect x="0.5" y="0.5" width="1279" height="239" rx="18" fill="none" stroke="#FFFFFF" stroke-opacity="0.09"/>
+</svg>

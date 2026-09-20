@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="150" viewBox="0 0 1280 150" role="img" aria-label="Currently building: IncognitoHub and SignalX 5G"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B0F19"/><stop offset="1" stop-color="#0F1730"/></linearGradient>
+<linearGradient id="ln" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+<linearGradient id="wv" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#22D3EE" stop-opacity="0.30"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0.30"/></linearGradient>
+<radialGradient id="o1"><stop offset="0" stop-color="#22D3EE" stop-opacity="0.28"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
+<radialGradient id="o2"><stop offset="0" stop-color="#8B5CF6" stop-opacity="0.26"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.035"/></pattern></defs><g transform="translate(0,0)">
+<rect x="0.5" y="0.5" width="631" height="149" rx="16" fill="url(#bg)" stroke="#FFFFFF" stroke-opacity="0.11"/>
+<circle cx="40" cy="42" r="5" fill="#22D3EE"/><circle cx="40" cy="42" r="5" fill="none" stroke="#22D3EE"><animate attributeName="r" values="5;14" dur="2.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="2.2s" repeatCount="indefinite"/></circle>
+<text x="62" y="47" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="2.5" fill="#22D3EE">IN DEVELOPMENT</text>
+<text x="32" y="92" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#F8FAFC">IncognitoHub</text>
+<text x="32" y="122" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#94A3B8">Building privacy-focused communication features.</text></g><g transform="translate(648,0)">
+<rect x="0.5" y="0.5" width="631" height="149" rx="16" fill="url(#bg)" stroke="#FFFFFF" stroke-opacity="0.11"/>
+<circle cx="40" cy="42" r="5" fill="#3B82F6"/><circle cx="40" cy="42" r="5" fill="none" stroke="#3B82F6"><animate attributeName="r" values="5;14" dur="2.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="2.2s" repeatCount="indefinite"/></circle>
+<text x="62" y="47" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="2.5" fill="#3B82F6">IN DEVELOPMENT</text>
+<text x="32" y="92" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#F8FAFC">SignalX 5G</text>
+<text x="32" y="122" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#94A3B8">Exploring Android networking and device capabilities.</text></g></svg>
