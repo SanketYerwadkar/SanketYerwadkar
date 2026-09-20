@@ -25,38 +25,31 @@
 
 ## Tech Stack
 
-<table>
+<table width="100%">
   <tr>
-    <td width="110"><b>Frontend</b></td>
-    <td><img src="https://skillicons.dev/icons?i=angular,ts,js,react,html,css,bootstrap&theme=dark" alt="Angular, TypeScript, JavaScript, React, HTML, CSS, Bootstrap"></td>
+    <td width="20%" valign="middle"><b>Frontend</b></td>
+    <td width="42%" valign="middle"><img src="https://skillicons.dev/icons?i=angular,ts,js,react,html,css,bootstrap&theme=dark" alt="Frontend Technologies"></td>
+    <td width="38%" valign="middle">Angular · TypeScript · JavaScript · React · HTML5 · CSS3 · Bootstrap</td>
   </tr>
   <tr>
-    <td><b>Backend</b></td>
-    <td>
-      <img src="https://skillicons.dev/icons?i=cs,dotnet,nodejs,express&theme=dark" alt="C#, .NET, Node.js, Express"><br>
-      <sub>C# · .NET · ASP.NET Core · Node.js · Express · REST APIs</sub>
-    </td>
+    <td width="20%" valign="middle"><b>Backend</b></td>
+    <td width="42%" valign="middle"><img src="https://skillicons.dev/icons?i=cs,dotnet,nodejs,express&theme=dark" alt="Backend Technologies"></td>
+    <td width="38%" valign="middle">C# · .NET · ASP.NET Core · Node.js · Express · REST APIs</td>
   </tr>
   <tr>
-    <td><b>Database</b></td>
-    <td>
-      <img src="https://skillicons.dev/icons?i=postgres,mongodb&theme=dark" alt="PostgreSQL, MongoDB"><br>
-      <sub>SQL · PostgreSQL · MongoDB</sub>
-    </td>
+    <td width="20%" valign="middle"><b>Database</b></td>
+    <td width="42%" valign="middle"><img src="https://skillicons.dev/icons?i=postgres,mongodb&theme=dark" alt="Database Technologies"></td>
+    <td width="38%" valign="middle">SQL · PostgreSQL · MongoDB</td>
   </tr>
   <tr>
-    <td><b>Mobile</b></td>
-    <td>
-      <img src="https://skillicons.dev/icons?i=kotlin&theme=dark" alt="Kotlin"><br>
-      <sub>Kotlin · Android</sub>
-    </td>
+    <td width="20%" valign="middle"><b>Mobile</b></td>
+    <td width="42%" valign="middle"><img src="https://skillicons.dev/icons?i=kotlin,android&theme=dark" alt="Mobile Technologies"></td>
+    <td width="38%" valign="middle">Kotlin · Android</td>
   </tr>
   <tr>
-    <td><b>Tools</b></td>
-    <td>
-      <img src="https://skillicons.dev/icons?i=git,github,docker,postman,azure&theme=dark" alt="Git, GitHub, Docker, Postman, Azure"><br>
-      <sub>Git · GitHub · Docker · Postman · Azure DevOps</sub>
-    </td>
+    <td width="20%" valign="middle"><b>Tools</b></td>
+    <td width="42%" valign="middle"><img src="https://skillicons.dev/icons?i=git,github,docker,postman,azure&theme=dark" alt="Tools Technologies"></td>
+    <td width="38%" valign="middle">Git · GitHub · Docker · Postman · Azure DevOps</td>
   </tr>
 </table>
 
